@@ -215,7 +215,7 @@ contract OxyFarmsNFT is ERC721Enumerable, Ownable {
      * @param addressesToWhitelist receives a list of addresses to whitelist.
      */
     function addAddressessToWhitelist(address[] memory addressesToWhitelist) external onlyOwner {
-        require(!preSaleOver, "OxyFarmsNFT::addEarlyBirds: presale is over, no more allowances");
+        require(!preSaleOver, "OxyFarmsNFT::addAddressessToWhitelist: presale is over, no more allowances");
         
         for (uint i = 0; i < addressesToWhitelist.length; i++) {
             whitelistedAllowance[addressesToWhitelist[i]] = maxPreSale;
